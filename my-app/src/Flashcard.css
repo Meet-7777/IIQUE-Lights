@@ -1,0 +1,26 @@
+.flashcard {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Lobster', cursive;
+  }
+  
+  .flashcard-content {
+    font-size: 2vw;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .flashcard {
+      width: 95%;
+    }
+  
+    .flashcard-content {
+      font-size: 4vw;
+    }
+  }
+  
