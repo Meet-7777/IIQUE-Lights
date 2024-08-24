@@ -9,7 +9,6 @@ import Feedback from './feedback.jsx';
 import ArchitectPartner from './ArchitectPartner';
 import Disclaimer from './Disclaimer'; // Ensure this file exists
 import EnterpriseSolutions from './EnterpriseSolutions';
-
 function App() {
   return (
     <Router>
