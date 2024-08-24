@@ -7,7 +7,7 @@ import logo from './logo.svg';
 import './App.css';
 import Feedback from './feedback.jsx';
 import ArchitectPartner from './ArchitectPartner';
-import Disclaimer from './Disclaimer'; // Ensure this file exists
+import Disclaimer from './Disclaimer'; 
 import EnterpriseSolutions from './EnterpriseSolutions';
 function App() {
   return (
