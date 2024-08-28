@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Header />x
+        <Header />
         <main className="container-fluid mt-4">
           <Routes>
             <Route path="/" element={<Home />} />
