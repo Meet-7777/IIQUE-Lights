@@ -194,6 +194,7 @@ footer {
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding:20px;
 }
 
 .heading-2 {
@@ -409,4 +410,25 @@ footer {
   .business-container ul li {
     font-size: 0.9em;
   }
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.progress {
+  height: 20px;
+  background-color: #4caf50;
+  width: 0;
+  transition: width 0.2s ease-in-out;
+}
+
+.progress-bar p {
+  margin: 5px 0 0 0;
+  font-weight: bold;
 }

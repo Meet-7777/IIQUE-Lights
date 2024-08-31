@@ -3,18 +3,25 @@ import './App.css';
 
 const Feedback = () => {
   const [formLoaded, setFormLoaded] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    // Create a script element
     const script = document.createElement('script');
-    
-    // Set the script's attributes
     script.type = 'text/javascript';
     script.async = true;
     script.src = 'https://secure.wufoo.com/scripts/embed/form.js';
     
-    // Initialize the form when the script is loaded
     script.onload = () => {
+      const interval = setInterval(() => {
+        setProgress((oldProgress) => {
+          if (oldProgress === 100) {
+            clearInterval(interval);
+            return oldProgress;
+          }
+          return Math.min(oldProgress + 10, 100); // Increment by 10%
+        });
+      }, 200); // Update progress every 200ms
+
       try {
         setTimeout(() => {
           const options = {
@@ -30,20 +37,19 @@ const Feedback = () => {
           const wufooForm = new window.WufooForm();
           wufooForm.initialize(options);
           wufooForm.display();
-          setFormLoaded(true); // Hide progress bar when the form is loaded
-        }, 100); // Adding a slight delay
+          setFormLoaded(true);
+          setProgress(100); // Set progress to 100% when form is loaded
+        }, 2000); // Simulating form load delay
       } catch (e) {
         console.error("Error displaying Wufoo form", e);
       }
     };
 
-    // Append the script to the document body or a specific container
     const container = document.getElementById('wufoo-form-container');
     if (container) {
       container.appendChild(script);
     }
 
-    // Cleanup script when component unmounts
     return () => {
       if (container) {
         container.removeChild(script);
@@ -57,8 +63,12 @@ const Feedback = () => {
       <p className="feedback-description">We value your feedback and would love to hear from you. Please fill out the form below to share your thoughts or ask any questions.</p>
       <div id="wufoo-form-container" aria-live="polite">
         {!formLoaded && (
+          <div>
           <div className="progress-bar">
-            <div className="progress"></div>
+            <div className="progress" style={{ width: `${progress}%` }}></div>
+            
+          </div>
+            <p>{progress}%</p> {/* Display the loading percentage */}
           </div>
         )}
         {/* This div will be replaced by the form */}

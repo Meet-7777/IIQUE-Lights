@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 import Feedback from './feedback.jsx';
 import ArchitectPartner from './ArchitectPartner';
@@ -33,7 +33,7 @@ const Header = () => {
   return (
     <header className="App-header p-3 bg-light d-flex align-items-center justify-content-between">
       <div className="header-left d-flex align-items-center">
-        <img src={logo} alt="IIQUE Logo" className="logo mr-3" />
+        {/* <img src={logo} alt="IIQUE Logo" className="logo mr-3" /> */}
         <div className="brand">
           <h1 className="heading-1">IIQUE</h1>
           <p className="tagline">Enterprise Lighting. Elevated.</p>
