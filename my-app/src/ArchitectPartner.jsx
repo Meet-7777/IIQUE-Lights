@@ -5,7 +5,7 @@ const ArchitectPartner = () => (
   <div className="architect-partner-page">
     <h2 >Partner with Us</h2>
     <div className="intro-text">
-      We're looking to collaborate with architects who can help us light up enterprises across the globe.
+      We're looking to collaborate with architects who can help us light up enterprises across India.
     </div>
     <div className="contact-info">
       Contact us today to discuss potential partnerships.
