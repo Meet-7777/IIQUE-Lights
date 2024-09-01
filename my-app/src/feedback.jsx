@@ -68,7 +68,7 @@ const Feedback = () => {
             <div className="progress" style={{ width: `${progress}%` }}></div>
             
           </div>
-            <p>{progress}%</p> {/* Display the loading percentage */}
+            <p style={{textAlign:'center'}}>{progress}%</p> {/* Display the loading percentage */}
           </div>
         )}
         {/* This div will be replaced by the form */}

@@ -9,6 +9,7 @@ import Feedback from './feedback.jsx';
 import ArchitectPartner from './ArchitectPartner';
 import Disclaimer from './Disclaimer'; 
 import EnterpriseSolutions from './EnterpriseSolutions';
+import Products from './Products.jsx'
 function App() {
   return (
     <Router>
@@ -21,6 +22,7 @@ function App() {
             <Route path="/ArchitectPartner" element={<ArchitectPartner />} />
             <Route path="/disclaimer" element={<Disclaimer />} /> {/* Ensure this path is correct */}
             <Route path="/EnterpriseSolutions" element={<EnterpriseSolutions />} />
+            <Route path="/products" element={<Products/>}/>
           </Routes>
         </main>
         <Footer />
@@ -41,7 +43,7 @@ const Header = () => {
       </div>
       <nav className="nav d-flex align-items-center">
         <Link className="nav-link" to="/">Home</Link>
-        <Link className="nav-link" to="/feedback">Feedback</Link>
+        <Link className="nav-link" to="/products">Products</Link>
         <Link className="nav-link" to="/ArchitectPartner">Architect Partner</Link>
         <Link className="nav-link business-link" to="/EnterpriseSolutions">Enterprise Solutions Inquiry</Link>
       </nav>
@@ -128,9 +130,12 @@ const Footer = () => {
       <div className="container">
         <p className="text-center mb-0">© 2024 IIQUE. All rights reserved.</p>
         <p className="text-center mb-0 footer-text">Proudly crafted in India ❤️</p>
+        <nav className="footer-nav d-flex justify-content-center mt-3">
+          <Link className="nav-link" to="/feedback">Feedback</Link>
+          <Link className="nav-link" to="/disclaimer">Disclaimer</Link>
+        </nav>
       </div>
     </footer>
   );
 };
-
 export default App;
