@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import './App.css';
-import Feedback from './Feedback';
+import Feedback from './feedback';
 import ArchitectPartner from './ArchitectPartner';
 import Disclaimer from './Disclaimer';
 import EnterpriseSolutions from './EnterpriseSolutions';
