@@ -433,8 +433,92 @@ footer {
   font-weight: bold;
 }
 
-
-
 .App-footer {
   border-bottom: 1px solid #dee2e6;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+/* Dropdown button styles */
+.dropbtn {
+  background-color: #03346E;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.dropbtn:hover {
+  background-color: #0253a6;
+}
+
+.caret {
+  margin-left: 8px; /* Space between text and arrow */
+  font-size: 0.8em; /* Adjust size of the arrow */
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #dee2e6;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+
+.dropdown-content a:hover {
+  background-color: #dee2e6;
+}
+
+/* Display the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Make the dropdown full-width on small screens */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%; /* Full width */
+  }
+
+  .dropbtn {
+    width: 100%; /* Full width button */
+    text-align: center; /* Center text */
+  }
+
+  .dropdown-content {
+    position: static; /* Position below the button */
+    width: 100%; /* Full width content */
+  }
+}
+
+.dropbtn .fas {
+  margin-left: 8px; /* Space between text and arrow */
+  font-size: 0.9em; /* Adjust arrow size */
+}
+
+/* For SVG icon */
+.arrow-icon {
+  width: 14px;
+  height: 14px;
+  margin-left: 8px;
+  transition: transform 0.3s ease; /* Add a smooth rotation effect when expanded */
+}
+
+.dropdown:hover .arrow-icon {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is opened */
 }

@@ -35,7 +35,6 @@ const Header = () => {
   return (
     <header className="App-header p-3 bg-light d-flex align-items-center justify-content-between">
       <div className="header-left d-flex align-items-center">
-        {/* <img src={logo} alt="IIQUE Logo" className="logo mr-3" /> */}
         <div className="brand">
           <h1 className="heading-1">IIQUE</h1>
           <p className="tagline">Enterprise Lighting. Elevated.</p>
@@ -44,8 +43,16 @@ const Header = () => {
       <nav className="nav d-flex align-items-center">
         <Link className="nav-link" to="/">Home</Link>
         <Link className="nav-link" to="/products">Products</Link>
-        <Link className="nav-link" to="/ArchitectPartner">Architect Partner</Link>
-        <Link className="nav-link business-link" to="/EnterpriseSolutions">Enterprise Solutions Inquiry</Link>
+        <Link className="nav-link" to="/feedback">Feedback</Link>
+        <div className="dropdown">
+        <button className="dropbtn">
+  Partnerships <i className="fas fa-chevron-down"></i> {/* Replaced with Font Awesome icon */}
+</button>
+          <div className="dropdown-content">
+            <Link className="nav-link" to="/ArchitectPartner">Architect Partner</Link>
+            <Link className="nav-link" to="/EnterpriseSolutions">Enterprise Solutions Inquiry</Link>
+          </div>
+        </div>
       </nav>
     </header>
   );
@@ -131,7 +138,6 @@ const Footer = () => {
         <p className="text-center mb-0">© 2024 IIQUE. All rights reserved.</p>
         <p className="text-center mb-0 footer-text">Proudly crafted in India ❤️</p>
         <nav className="footer-nav d-flex justify-content-center mt-3">
-          <Link className="nav-link" to="/feedback">Feedback</Link>
           <Link className="nav-link" to="/disclaimer">Disclaimer</Link>
         </nav>
       </div>
