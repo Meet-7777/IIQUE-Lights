@@ -445,7 +445,7 @@ footer {
 
 /* Dropdown button styles */
 .dropbtn {
-  background-color: #03346E;
+  background-color: #F5004F;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -454,7 +454,7 @@ footer {
 }
 
 .dropbtn:hover {
-  background-color: #0253a6;
+  background-color: #d60648f5;
 }
 
 .caret {
