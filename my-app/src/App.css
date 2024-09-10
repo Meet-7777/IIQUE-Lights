@@ -522,3 +522,61 @@ footer {
 .dropdown:hover .arrow-icon {
   transform: rotate(180deg); /* Rotate arrow when dropdown is opened */
 }
+
+.dropbtn:focus {
+  outline: 2px solid #0253a6;
+  outline-offset: 2px;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #dee2e6;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 160px;
+}
+
+.dropdown-content.show {
+  display: block;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #dee2e6;
+}
+
+/* Rotate dropdown arrow when open */
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.dropbtn:focus {
+  outline: 2px solid #0253a6;
+  outline-offset: 2px;
+}
+
+/* Make the dropdown full-width on small screens */
+@media (max-width: 768px) {
+  .dropdown {
+    width: 100%; /* Full width */
+  }
+
+  .dropbtn {
+    width: 100%; /* Full width button */
+    text-align: center; /* Center text */
+  }
+
+  .dropdown-content {
+    position: static; /* Position below the button */
+    width: 100%; /* Full width content */
+  }
+}

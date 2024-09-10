@@ -3,13 +3,13 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-// import logo from './logo.svg';
 import './App.css';
-import Feedback from './feedback.jsx';
+import Feedback from './Feedback';
 import ArchitectPartner from './ArchitectPartner';
-import Disclaimer from './Disclaimer'; 
+import Disclaimer from './Disclaimer';
 import EnterpriseSolutions from './EnterpriseSolutions';
-import Products from './Products.jsx'
+import Products from './Products';
+
 function App() {
   return (
     <Router>
@@ -20,9 +20,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/feedback" element={<Feedback />} />
             <Route path="/ArchitectPartner" element={<ArchitectPartner />} />
-            <Route path="/disclaimer" element={<Disclaimer />} /> {/* Ensure this path is correct */}
+            <Route path="/disclaimer" element={<Disclaimer />} />
             <Route path="/EnterpriseSolutions" element={<EnterpriseSolutions />} />
-            <Route path="/products" element={<Products/>}/>
+            <Route path="/products" element={<Products />} />
           </Routes>
         </main>
         <Footer />
@@ -32,6 +32,12 @@ function App() {
 }
 
 const Header = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownToggle = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
   return (
     <header className="App-header p-3 bg-light d-flex align-items-center justify-content-between">
       <div className="header-left d-flex align-items-center">
@@ -45,10 +51,10 @@ const Header = () => {
         <Link className="nav-link" to="/products">Products</Link>
         <Link className="nav-link" to="/feedback">Feedback</Link>
         <div className="dropdown">
-        <button className="dropbtn">
-  Partnerships <i className="fas fa-chevron-down"></i> {/* Replaced with Font Awesome icon */}
-</button>
-          <div className="dropdown-content">
+          <button className="dropbtn" onClick={handleDropdownToggle}>
+            Partnerships <i className={`fas fa-chevron-down ${isDropdownOpen ? 'rotate' : ''}`}></i>
+          </button>
+          <div className={`dropdown-content ${isDropdownOpen ? 'show' : ''}`}>
             <Link className="nav-link" to="/ArchitectPartner">Architect Partner</Link>
             <Link className="nav-link" to="/EnterpriseSolutions">Enterprise Solutions Inquiry</Link>
           </div>
@@ -144,4 +150,5 @@ const Footer = () => {
     </footer>
   );
 };
+
 export default App;
