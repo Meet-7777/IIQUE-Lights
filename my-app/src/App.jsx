@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -33,10 +33,24 @@ function App() {
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef(null);
 
   const handleDropdownToggle = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen((prev) => !prev);
   };
+
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="App-header p-3 bg-light d-flex align-items-center justify-content-between">
@@ -50,7 +64,7 @@ const Header = () => {
         <Link className="nav-link" to="/">Home</Link>
         <Link className="nav-link" to="/products">Products</Link>
         <Link className="nav-link" to="/feedback">Feedback</Link>
-        <div className="dropdown">
+        <div className="dropdown" ref={dropdownRef}>
           <button className="dropbtn" onClick={handleDropdownToggle}>
             Partnerships <i className={`fas fa-chevron-down ${isDropdownOpen ? 'rotate' : ''}`}></i>
           </button>
@@ -63,6 +77,7 @@ const Header = () => {
     </header>
   );
 };
+
 
 const Home = () => {
   const features = [
