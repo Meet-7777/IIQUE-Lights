@@ -56,7 +56,7 @@ const Header = () => {
     <header className="App-header p-3 bg-light d-flex align-items-center justify-content-between">
       <div className="header-left d-flex align-items-center">
         <div className="brand">
-          <h1 className="heading-1">IIQUE</h1>
+          <h1 className="heading-1">Mahalaxmi Distributors</h1>
           <p className="tagline">Enterprise Lighting. Elevated.</p>
         </div>
       </div>
@@ -99,8 +99,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>IIQUE - Home</title>
-        <meta name="description" content="Welcome to IIQUE, offering premium lighting solutions for enterprises. Discover our innovative, sustainable, and high-efficiency lighting products." />
+        <title>Mahalaxmi Distributors - Home</title>
+        <meta name="description" content="Welcome to Mahalaxmi Distributors, offering premium lighting solutions for enterprises. Discover our innovative, sustainable, and high-efficiency lighting products." />
       </Helmet>
       <section className="hero">
         <div className="hero-text"><strong>Light up</strong> your enterprise</div>
@@ -108,12 +108,12 @@ const Home = () => {
       <section className="about mt-4">
         <h2 className="heading-2">About Us</h2>
         <p className="about-text">
-          At IIQUE, we are passionate about delivering premium lighting solutions tailored to the needs of contemporary enterprises. Our products embody innovation, sustainability, and excellence, providing unparalleled efficiency and reliability. We are committed to elevating your business environment with lighting that is as functional as it is inspiring.
+          At Mahalaxmi Distributors, we are passionate about delivering premium lighting solutions tailored to the needs of contemporary enterprises. Our products embody innovation, sustainability, and excellence, providing unparalleled efficiency and reliability. We are committed to elevating your business environment with lighting that is as functional as it is inspiring.
         </p>
         <section className="commitment mt-4">
           <h2 className="heading-2">Our Commitment</h2>
           <p className="commitment-text">
-            At IIQUE, our commitment to excellence is reflected in every aspect of our work. We focus on:
+            At Mahalaxmi Distributors, our commitment to excellence is reflected in every aspect of our work. We focus on:
           </p>
           <div className="commitment-list">
             <div className="commitment-item">
@@ -156,7 +156,7 @@ const Footer = () => {
   return (
     <footer className="App-footer bg-light p-3 mt-4">
       <div className="container">
-        <p className="text-center mb-0">© 2024 IIQUE. All rights reserved.</p>
+        <p className="text-center mb-0">© 2024 Mahalaxmi Distributors. All rights reserved.</p>
         <p className="text-center mb-0 footer-text">Proudly crafted in India ❤️</p>
         <nav className="footer-nav d-flex justify-content-center mt-3">
           <Link className="nav-link" to="/disclaimer">Disclaimer</Link>

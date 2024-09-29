@@ -11,7 +11,7 @@ const ArchitectPartner = () => (
       Contact us today to discuss potential partnerships.
     </div>
     <div className="contact-details">
-      <a href="mailto:partner@iique.co.in" className="email-link">partner@iique.co.in</a>
+      <a href="mailto:mahalaxmidistributors07@gmail.com" className="email-link">mahalaxmidistributors07@gmail.com</a>
       <br />
       <a href="tel:+919768739622" className="phone-link">+91 9768739622</a>
     </div>
