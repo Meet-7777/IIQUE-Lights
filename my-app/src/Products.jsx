@@ -13,6 +13,11 @@ import StreetLight from './Images/streetLight.jpeg'
 import McbBox from './Images/MCB-Box-legrand.jpg'
 import Cany from './Images/Cany-Entensions.jpeg'
 import Drivers from './Images/LedDrivers.jpeg'
+import LEDLightBulb from './Images/LEDlightBulb.jpeg'
+import MSandSS from './Images/MS-SS-Screws.jpeg'
+import TelescopicChannels from './Images/telescopicChannel.jpeg'
+import HydraulicHinges from './Images/Hydraulic_Hinge.jpg'
+import BedFittings from './Images/bedFittings.jpeg'
 
 const products = [
   {
@@ -80,9 +85,38 @@ const products = [
     name: 'Cany Extension Board',
     image: Cany,
     description: 'Versatile extension boards equipped with multiple outlets and safety features. Ideal for home and office use, ensuring your devices stay powered and connected without hassle.',
+  },
+  {
+    id: 12,
+    name: 'LED Light Bulb',
+    image: LEDLightBulb,
+    description: 'Bright and long-lasting LED light bulbs that offer energy-efficient illumination. Suitable for residential, commercial, and industrial lighting solutions.',
+  },
+  {
+    id:13,
+    name:'MS and SS Screws',
+    image:MSandSS,
+    description:'High-quality MS (Mild Steel) and SS (Stainless Steel) screws, perfect for fastening needs in construction, furniture, and other industrial applications. These screws ensure strength and durability for long-lasting performance.',
+  },
+  {
+    id:14,
+    name:'Hydraulic Auto Hinges',
+    image:HydraulicHinges,
+    description:'Hydraulic hinges designed for smooth and noiseless door operation. These hinges ensure soft closing, making them ideal for kitchen cabinets, wardrobes, and other furniture.',
+  },
+  {
+    id:15,
+    name:'Telescopic Channels',
+    image:TelescopicChannels,
+    description:'Heavy-duty telescopic channels that provide smooth drawer operation. These channels are built to withstand frequent use and ensure stability in various types of furniture.',
+  },
+  {
+    id:16,
+    name:'Bed Fittings',
+    image:BedFittings,
+    description:'Durable and high-quality bed fittings designed to ensure stability and support. Perfect for assembling and securing beds in both residential and commercial settings.',
   }
 ];
-
 
 export default function Products() {
   return (
@@ -98,9 +132,14 @@ export default function Products() {
             />
             <h2 className="product-name">{product.name}</h2>
             <p className="product-description">{product.description}</p>
-            <button className="product-button">View Details</button>
+            {/* <button className="product-button">View Details</button> */}
           </div>
         ))}
+      </div>
+      <div className="product-contact">
+        <p>For any product inquiry or more information, contact:</p>
+        <p>Email: mahalaxmidistributors07@gmail.com</p>
+        <p>Phone: +91 9768739622</p>
       </div>
     </div>
   );
